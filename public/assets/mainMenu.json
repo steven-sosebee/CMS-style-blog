@@ -1,0 +1,26 @@
+[
+  {
+    "menuItem": "Home",
+    "menuLink": "/",
+    "loginRequired": false,
+    "showLoggedIn": true
+  },
+  {
+    "menuItem": "Posts",
+    "menuLink": "/posts",
+    "loginRequired": false,
+    "showLoggedIn": true
+  },
+  {
+    "menuItem": "Login",
+    "menuLink": "/login",
+    "loginRequired": false,
+    "showLoggedIn": false
+  },
+  {
+    "menuItem": "Logout",
+    "menuLink": "/logout",
+    "loginRequired": true,
+    "showLoggedIn": true
+  }
+]

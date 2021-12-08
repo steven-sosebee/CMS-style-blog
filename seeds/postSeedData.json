@@ -1,0 +1,12 @@
+[
+  {
+    "post_name": "Using Javascript",
+    "post_text": "lorem ipsem",
+    "user_id": 1
+  },
+  {
+    "post_name": "Using handlebars",
+    "post_text": "lorem ipsem",
+    "user_id": 2
+  }
+]
