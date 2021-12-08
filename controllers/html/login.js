@@ -5,14 +5,14 @@ const router = require("express").Router();
 router.get("/", async (req, res) => {
   try {
     console.log("rendering login screen...");
-    req.session.save(() => {
-      //   req.session.logged_in = true;
-      //   req.session.user_name = "steven";
-      res.render("login", {
-        menu,
-        session: req.session,
-      });
+    // await req.session.save(() => {
+    //   req.session.logged_in = true;
+    //   req.session.user_name = "steven";
+    res.render("login", {
+      menu,
+      session: req.session,
     });
+    // });
     return;
   } catch (err) {
     console.log("Error in rendering login screen...");

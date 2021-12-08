@@ -1,5 +1,3 @@
-// const e = require("express");
-
 const submitBtn = document.getElementById("new-post");
 const deleteBtn = document.querySelector(".post-list");
 

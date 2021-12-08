@@ -17,12 +17,12 @@ const sess = {
   key: "blog-style app",
   secret: "blog-style app",
   cookie: {
-    // httpOnly: false,
+    httpOnly: false,
     maxAge: 60000,
-    // rolling: true,
+    rolling: true,
   },
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
   store: new SequelizeStore({
     db: sequelize,
   }),
@@ -38,7 +38,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
-// sess.logged_in = true;
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening at localhost:${PORT}`));
 });

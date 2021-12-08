@@ -1,0 +1,16 @@
+<div>
+  <div class="row">
+    {{posts.post_name}}
+  </div>
+  <div class="row">
+    {{posts.post_text}}
+  </div>
+  <div>
+  {{>comment-submission}}
+  </div>
+      <div class="comment-list">
+      {{#each posts.comments as |comment|}}
+    {{>comment-details}}
+  {{/each}}
+  </div>
+</div>

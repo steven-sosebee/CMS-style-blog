@@ -10,11 +10,12 @@ router.use("/login", loginRoutes);
 
 router.get("/", async (req, res) => {
   try {
-    const currentSession = req.session;
-    console.log(currentSession);
+    // const currentSession = req.session;
+    console.log("Home route session...");
+    console.log(req.session);
     res.render("posts", {
       menu,
-      session: currentSession,
+      session: req.session,
     });
   } catch (err) {
     res.status(500).json(err);

@@ -12,7 +12,7 @@ const loginHandler = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
   if (login.ok) {
-    document.location.replace("/");
+    document.location.replace("/posts");
   }
 };
 
