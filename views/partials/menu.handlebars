@@ -1,0 +1,20 @@
+<nav class="nav navbar-dark bg-dark">
+       {{#if session.logged_in}}
+       <div class="text-white">Welcome, {{session.user_name}}</div>
+       {{/if}}
+       <ul class="nav">
+     {{#if session.logged_in}}
+      {{#each menu as |menuItem|}}
+        {{#if showLoggedIn}}
+        {{>nav-details}}
+        {{/if}}
+      {{/each}}
+      {{else}}
+      {{#each menu as |menuItem|}}
+        {{#unless loginRequired}}
+          {{>nav-details}}
+        {{/unless}}
+      {{/each}}
+      {{/if}}
+     </ul>
+     </nav>

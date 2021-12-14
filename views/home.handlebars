@@ -1,27 +1,5 @@
-<div><form class="form" id="new-post">
-    <div class="row">
-      <label for="name">Title:</label><input
-        type="text"
-        class="form-input"
-        name="name"
-        id="post_name"
-      />
-    </div>
-    <div class="row">
-      <input type="text" class="form-input" name="text" id="post_text" />
-    </div>
-    <button type="submit" id="form-submit">Submit Post</button>
-  </form>
-  {{#each posts as |post|}}
-    <section class="card">
-      <header class="card-header">{{post_name}}<button
-          class="btn-danger btn-delete btn-sm"
-          data-id={{id}}
-        >X</button></header>
-      <div class="card-body">{{post_text}}</div>
-      <div>{{user_name}}</div>
-
-    </section>
-  {{/each}}
+<div class="card p-0 md-8 lg-8 sm-6 align-center">
+  Welcome to the Techno-blog!
+  <a href="/login"><span>
+      Sign-in or Sign-up to add to the conversation...</span></a>
 </div>
-<script src="./js/posts.js"></script>

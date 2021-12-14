@@ -1,0 +1,14 @@
+.img-holder {
+  /* overflow: hidden; */
+  height: 100vh;
+  opacity: 70%;
+  width: 100%;
+  background-color: black;
+  background-image: url("/assets/images/hero.jpg");
+  background-size: cover;
+  filter: blur(8px);
+}
+span {
+  color: blue;
+  font-size: medium;
+}

@@ -1,16 +1,24 @@
 <div>
-  <div class="row">
-    {{posts.post_name}}
+  <div id="post-id" class="d-none">
+    {{posts.id}}
   </div>
-  <div class="row">
-    {{posts.post_text}}
-  </div>
-  <div>
-  {{>comment-submission}}
+<div class=" p-2 card w-100 bg-secondary">
+    <h3>
+      {{posts.post_name}}
+    </h3>
+    <h4 class="">
+      {{posts.post_text}}
+    </h4>
+    Posted at: <span>{{posts.createdAt}}</span>
+  </div> 
+  <br> 
+  <div class="p-2">
+    {{>comment-submission}}
   </div>
       <div class="comment-list">
-      {{#each posts.comments as |comment|}}
-    {{>comment-details}}
-  {{/each}}
-  </div>
+        {{#each posts.comments as |comment|}}
+        {{>comment-details}}
+        {{/each}}
+      </div>
 </div>
+<script src="/./js/comments.js"></script>

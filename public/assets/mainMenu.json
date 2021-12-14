@@ -1,13 +1,7 @@
 [
   {
-    "menuItem": "Home",
-    "menuLink": "/",
-    "loginRequired": false,
-    "showLoggedIn": true
-  },
-  {
-    "menuItem": "Posts",
-    "menuLink": "/posts",
+    "menuItem": "Dashboard",
+    "menuLink": "/dashboard",
     "loginRequired": false,
     "showLoggedIn": true
   },

@@ -1,9 +1,21 @@
 <section class="card">
-  <header class="card-header"><a href="/posts/{{id}}">{{post_name}}</a><button
-      class="btn-danger btn-delete btn-sm"
+  <header class="container-fluid card-header bg-dark text-white"><a
+      class="text-decoration-none text-white"
+      href="/dashboard/{{id}}"
+    >{{post_name}}</a>
+    <button
+      class="btn-danger btn-delete btn-sm mx-5"
       data-id={{id}}
-    >X</button></header>
-  <a href="/posts/{{id}}"><div class="card-body">{{post_text}}</div></a>
-  <div>{{user.user_name}}</div>
+    >delete</button>
+    <br />
+    by
+    <span class="text-decoration-none text-white text-italic"><em
+      >{{user.user_name}}</em></span>
+    <br />
+    posted at:
+    <span class="text-decoration-none text-white">{{createdAt}}</span></header>
+  <a class="text-decoration-none text-black" href="/dashboard/{{id}}"><div
+      class="card-body"
+    >{{post_text}}</div></a>
 
 </section>

@@ -7,10 +7,10 @@ const apiRoutes = require("./api/");
 router.use("/", htmlRoutes);
 router.use("/api", apiRoutes);
 
-// TODO: develop 404 page
+// error page for wayward url requests...
 router.get("*", async (req, res) => {
   try {
-    res.render("404", {});
+    res.render("home", {});
   } catch (err) {
     res.status(500).json(err);
   }

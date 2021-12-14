@@ -1,14 +1,20 @@
-<form class="form" id="new-post">
-  <div class="row">
-    <label for="name">Title:</label><input
-      type="text"
-      class="form-input"
-      name="name"
-      id="post_name"
-    />
-  </div>
-  <div class="row">
-    <input type="text" class="form-input" name="text" id="post_text" />
-  </div>
-  <button type="submit" id="form-submit">Submit Post</button>
-</form>
+<h5>New Post:</h5>
+<div class="card p-2 mx-auto">
+  <form class="form-inline" id="new-post">
+    <div class="d-flex flex-row">
+      <label for="name" class="col-form-label m-4">Title:</label>
+      <input type="text" class="flex-grow-1" name="name" id="post_name" />
+    </div>
+    <div class="d-flex">
+      <label for="text" class="col-form-label m-2">Post Text:</label>
+      <textarea
+        type="text"
+        rows="5"
+        class="col-form-input flex-grow-1"
+        name="text"
+        id="post_text"
+      ></textarea>
+    </div>
+    <button class="btn-primary" type="submit" id="form-submit">Submit Post</button>
+  </form>
+</div>

@@ -1,19 +1,22 @@
 const router = require("express").Router();
 const logoutRoutes = require("./logout");
 const loginRoutes = require("./login");
-const postRoutes = require("./posts");
+const dashboardRoutes = require("./dashboard");
 const menu = require("../../public/assets/mainMenu.json");
 
+// calls the logout scripts...
 router.use("/logout", logoutRoutes);
-router.use("/posts", postRoutes);
+
+// routes to display the post information...
+router.use("/dashboard", dashboardRoutes);
+
+// displays the login or signup form...
 router.use("/login", loginRoutes);
 
+// home page route...
 router.get("/", async (req, res) => {
   try {
-    // const currentSession = req.session;
-    console.log("Home route session...");
-    console.log(req.session);
-    res.render("posts", {
+    res.render("home", {
       menu,
       session: req.session,
     });
