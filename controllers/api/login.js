@@ -48,12 +48,11 @@ router.post("/signup", async (req, res) => {
       email: req.body.user_email,
       password: req.body.password,
     });
-
+    req.session.user_name = req.body.user_name;
+    req.session.user_id = req.body.user_id;
+    req.session.logged_in = true;
     // saves the user information to the session, if successfully created...
     req.session.save(() => {
-      (req.session.user_name = newUser.user_name),
-        (req.session.user_id = newUser.user_id),
-        (req.session.logged_in = true);
       res.status(200).json({ message: "user successfully created..." });
     });
   } catch (err) {

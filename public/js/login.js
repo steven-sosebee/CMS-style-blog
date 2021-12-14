@@ -27,6 +27,10 @@ const signupHandler = async (event) => {
   const user_email = document.getElementById("signup_email").value.trim();
   const password = document.getElementById("signup_password").value.trim();
 
+  if (password.length < 8) {
+    window.alert("Password should be 8 characters long...");
+    return;
+  }
   // passes user inputs to the database...
   const login = await fetch("/api/login/signup", {
     method: "POST",
