@@ -18,7 +18,7 @@ const sess = {
   secret: "blog-style app",
   cookie: {
     httpOnly: false,
-    maxAge: 600000,
+    maxAge: 60000,
     rolling: true,
   },
   resave: false,

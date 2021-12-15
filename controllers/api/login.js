@@ -43,13 +43,13 @@ router.post("/", async (req, res) => {
 router.post("/signup", async (req, res) => {
   try {
     // creates a new user record using information from the sign-up form...
-    const newUser = User.create({
+    const newUser = await User.create({
       user_name: req.body.user_name,
       email: req.body.user_email,
       password: req.body.password,
     });
     req.session.user_name = newUser.user_name;
-    req.session.user_id = newUser.user_id;
+    req.session.user_id = newUser.id;
     req.session.logged_in = true;
     // saves the user information to the session, if successfully created...
     req.session.save(() => {
